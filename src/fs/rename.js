@@ -5,7 +5,7 @@ const rename = async () => {
     fs.existsSync("./files/properFilename.md") ||
     !fs.existsSync("./files/wrongFilename.txt")
   ) {
-    console.error("FS operation failed");
+    console.error(new Error("Fs operation failed"));
   } else {
     fs.rename(
       "./files/wrongFilename.txt",
